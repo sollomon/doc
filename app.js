@@ -8,8 +8,7 @@ const app = express();
 app.use(cors());
 
 app.use(bodyParser.json());
-
-mongoose.connect('mongodb://localhost/george');
+mongoose.connect(`mongodb+srv://sollomon:patapotea@cluster0-mykdj.mongodb.net/test?retryWrites=true`);
 mongoose.connection.once('open', () =>{
   console.log('database connected');
 })
