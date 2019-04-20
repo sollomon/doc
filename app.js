@@ -9,7 +9,7 @@ app.use(cors());
 
 app.use(bodyParser.json());
 
-mongoose.connect('mongodb://localhost/george');
+mongoose.connect('mongodb+srv://dbDoctor:<dbDoctor1997>@cluster0-ytqge.mongodb.net/test?retryWrites=true');
 mongoose.connection.once('open', () =>{
   console.log('database connected');
 })
