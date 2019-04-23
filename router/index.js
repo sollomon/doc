@@ -79,14 +79,14 @@ router.get('/me',function(req, res, next){
     res.send(data)
 })
 
-router.get('/exercise',(req, res, next)=>{
-    
+router.get('/',(req, res, next)=>{
+    res.status(200).json({
+        message:"Welcome to Quiet Chambers"
+    })
 })
 
-router.get('/',(req, res, next)=>{
-    res.status.json({
-        message:"Welcome to quiet chambers"
-    })
+router.get('/exercise',(req, res, next)=>{
+    
 })
 
 router.post('/exercise',(req,res,next)=>{
