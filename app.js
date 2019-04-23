@@ -21,4 +21,4 @@ app.use(function(req, res, next) {
     next(createError(404));
 });
 
-app.listen(4001, ()=> console.log(' George server'));
+app.listen(process.env.PORT || 4001, ()=> console.log(' George server'));
