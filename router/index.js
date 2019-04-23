@@ -83,6 +83,12 @@ router.get('/exercise',(req, res, next)=>{
     
 })
 
+router.get('/',(req, res, next)=>{
+    res.status.json({
+        message:"Welcome to quiet chambers"
+    })
+})
+
 router.post('/exercise',(req,res,next)=>{
     User.findOne({name:req.body.name}).exec().then(async results=>{
         const spec = await Spec.findOne({_id:results.spec}).then(spec=>{return spec})
